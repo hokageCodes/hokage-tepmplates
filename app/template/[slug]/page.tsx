@@ -113,27 +113,27 @@ export default function TemplatePage() {
 </section>
 
       {/* What's included */}
-      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <section className="max-w-5xl mx-auto px-4 sm:px-8 mb-16">
         <div>
-          <h2 className="text-xl font-bold mb-4 text-text">What's Included</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <h2 className="text-xl font-bold mb-4 text-text text-center">What's Included</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {whatsIncluded.map(w => (
-              <div key={w.label} className="bg-white rounded-xl border border-border p-5 flex flex-col gap-2">
-                <div className="font-semibold text-text">{w.label}</div>
-                <div className="text-sm text-neutral-500">{w.desc}</div>
+              <div key={w.label} className="bg-white rounded-xl border border-border p-4 sm:p-5 flex flex-col gap-1 sm:gap-2 items-center text-center">
+                <div className="font-semibold text-base sm:text-lg text-text">{w.label}</div>
+                <div className="text-xs sm:text-sm text-neutral-500">{w.desc}</div>
               </div>
             ))}
           </div>
         </div>
         {/* Make it yours */}
-        <div>
-          <h2 className="text-xl font-bold mb-4 text-text">Make It Yours</h2>
-          <p className="text-neutral-600 mb-6">This template is intentionally minimal. You're expected to customize content, colors, copy, and layout to make it yours. We've organized the code to make these changes trivial.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="pt-12 pb-2">
+          <h2 className="text-xl font-bold mb-4 text-text text-center">Make It Yours</h2>
+          <p className="text-neutral-600 mb-6 text-center">This template is intentionally minimal. You're expected to customize content, colors, copy, and layout to make it yours. We've organized the code to make these changes trivial.</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {makeItYours.map(m => (
-              <div key={m.label} className="bg-white rounded-xl border border-border p-5 flex flex-col gap-2">
-                <div className="font-semibold text-text">{m.label}</div>
-                <div className="text-sm text-neutral-500">{m.desc}</div>
+              <div key={m.label} className="bg-white rounded-xl border border-border p-4 sm:p-5 flex flex-col gap-1 sm:gap-2 items-center text-center">
+                <div className="font-semibold text-base sm:text-lg text-text">{m.label}</div>
+                <div className="text-xs sm:text-sm text-neutral-500">{m.desc}</div>
               </div>
             ))}
           </div>
@@ -141,21 +141,21 @@ export default function TemplatePage() {
       </section>
 
       {/* Get the template CTA */}
-      <section className="max-w-2xl mx-auto mb-16">
-        <div className="bg-neutral-900 rounded-2xl p-10 text-center text-white shadow-lg">
+      <section className="max-w-2xl mx-auto px-4 sm:px-8 mb-16">
+        <div className="bg-neutral-900 rounded-2xl p-6 sm:p-10 text-center text-white shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Get the template</h2>
           <p className="mb-6 text-neutral-300">Download the template for free and customize it for your own use. Open source and ready to go.</p>
-          <div className="flex justify-center gap-4">
-            <a href="#" className="px-6 py-3 rounded-md font-semibold text-base bg-accent text-white hover:bg-accent/90 transition-colors">Download on GitHub</a>
-            <a href="#" className="px-6 py-3 rounded-md font-semibold text-base bg-white text-neutral-900 border border-border hover:bg-neutral-100 transition-colors">Download ZIP</a>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 w-full">
+            <a href="#" className="w-full sm:w-auto px-6 py-3 rounded-md font-semibold text-base bg-accent text-white hover:bg-accent/90 transition-colors text-center">Download on GitHub</a>
+            <a href="#" className="w-full sm:w-auto px-6 py-3 rounded-md font-semibold text-base bg-white text-neutral-900 border border-border hover:bg-neutral-100 transition-colors text-center">Download ZIP</a>
           </div>
           <div className="mt-4 text-xs text-neutral-400">No account required. MIT License.</div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="max-w-2xl mx-auto mb-16">
-        <h2 className="text-xl font-bold mb-6 text-text">Frequently Asked Questions</h2>
+      <section className="max-w-2xl mx-auto px-4 sm:px-8 mb-16">
+        <h2 className="text-xl font-bold mb-6 text-text text-center">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
             <details key={faq.q} className="bg-white rounded-lg border border-border p-4">
@@ -168,10 +168,10 @@ export default function TemplatePage() {
 
       {/* Footer */}
       <footer className="w-full py-8 mt-auto border-t border-neutral-200">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-600">
-            <p>© {new Date().getFullYear()} Hokage Creative Labs. All rights reserved.</p>
-            <div className="flex gap-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-600 text-center">
+            <p className="w-full sm:w-auto">© {new Date().getFullYear()} Hokage Creative Labs. All rights reserved.</p>
+            <div className="flex flex-row gap-6 w-full sm:w-auto items-center justify-center">
               <a href="#" className="hover:text-neutral-900 transition-colors">Privacy</a>
               <a href="#" className="hover:text-neutral-900 transition-colors">Terms</a>
               <a href="#" className="hover:text-neutral-900 transition-colors">Contact</a>

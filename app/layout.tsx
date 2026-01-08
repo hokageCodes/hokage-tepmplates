@@ -8,6 +8,42 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "Modern Launch Templates",
   description: "Clean website templates to help you launch without overthinking.",
+  keywords: [
+    "Next.js templates",
+    "Tailwind CSS",
+    "website templates",
+    "landing page",
+    "portfolio",
+    "open source",
+    "react",
+    "startup",
+    "developer portfolio",
+    "coach website",
+    "event landing page"
+  ],
+  authors: [{ name: "Hokage Creative Labs" }],
+  openGraph: {
+    title: "Modern Launch Templates",
+    description: "Clean website templates to help you launch without overthinking.",
+    url: "https://hokagecreativelabs.com",
+    siteName: "Hokage Creative Labs",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Modern Launch Templates by Hokage Creative Labs"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Modern Launch Templates",
+    description: "Clean website templates to help you launch without overthinking.",
+    images: ["/og-image.png"]
+  }
 };
 
 export default function RootLayout({
