@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 const Hero = () => {
   return (
     <section className="w-full flex justify-center pt-16">
-      <div className="w-full max-w-3xl px-4 flex flex-col items-center text-center gap-6">
+      <div className="w-full max-w-3xl px-4 flex flex-col items-start sm:items-center text-left sm:text-center gap-6">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
           Clean website templates to help you launch without overthinking.
         </h1>

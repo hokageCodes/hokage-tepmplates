@@ -54,7 +54,7 @@ export default function TemplatePage() {
   return (
     <main className="bg-bg min-h-screen">
       {/* Hero */}
-      <section className="max-w-2xl mx-auto text-center py-16">
+      <section className="max-w-2xl mx-auto text-left sm:text-center py-16">
         <h1 className="text-4xl font-extrabold mb-4 text-text">{hero.title}</h1>
         <p className="text-lg text-neutral-600 mb-6">{hero.subtitle}</p>
         <div className="flex justify-center gap-4 mb-6">

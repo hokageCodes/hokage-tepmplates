@@ -5,7 +5,7 @@ import { TEMPLATES } from "../../lib/config";
 
 function TemplateGrid() {
   return (
-    <section className="w-full flex flex-col items-center py-12 bg-white rounded-2xl border border-border">
+    <section className="w-full flex flex-col items-center py-12">
       <h2 className="text-2xl font-extrabold flex items-center gap-2 mb-8 text-neutral-900">
         <span className="inline-block align-middle">
           <svg width="28" height="28" fill="none" viewBox="0 0 28 28" className="text-accent"><rect width="28" height="28" rx="6" fill="currentColor" opacity="0.12"/><rect x="8" y="8" width="12" height="12" rx="3" fill="currentColor"/></svg>
