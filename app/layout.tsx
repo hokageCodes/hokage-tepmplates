@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Modern Launch Templates",
     description: "Clean website templates to help you launch without overthinking.",
-    url: "https://hokagecreativelabs.com",
+    url: "https://hokage-templates.vercel.app",
     siteName: "Hokage Creative Labs",
     images: [
       {
