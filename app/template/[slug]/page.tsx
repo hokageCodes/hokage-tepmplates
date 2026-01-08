@@ -54,15 +54,16 @@ export default function TemplatePage() {
   return (
     <main className="bg-bg min-h-screen">
       {/* Hero */}
-      <section className="max-w-2xl mx-auto text-left sm:text-center py-16">
-        <h1 className="text-4xl font-extrabold mb-4 text-text">{hero.title}</h1>
-        <p className="text-lg text-neutral-600 mb-6">{hero.subtitle}</p>
-        <div className="flex justify-center gap-4 mb-6">
+      <section className="max-w-2xl mx-auto text-left sm:text-center py-12 px-4 sm:px-8 md:py-16">
+        {/* Responsive heading and subtitle */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-text leading-tight">{hero.title}</h1>
+        <p className="text-base sm:text-lg md:text-xl text-neutral-600 mb-6">{hero.subtitle}</p>
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-6 w-full text-center">
           {hero.buttons.map(btn => (
-            <a key={btn.label} href={btn.href} className={`px-6 py-3 rounded-md font-semibold text-base transition-colors ${btn.variant === "accent" ? "bg-accent text-white hover:bg-accent/90" : "bg-white border border-border text-text hover:bg-neutral-100"}`}>{btn.label}</a>
+            <a key={btn.label} href={btn.href} className={`w-full sm:w-auto px-6 py-3 rounded-md font-semibold text-base transition-colors text-center ${btn.variant === "accent" ? "bg-accent text-white hover:bg-accent/90" : "bg-white border border-border text-text hover:bg-neutral-100"}`}>{btn.label}</a>
           ))}
         </div>
-        <div className="flex justify-center gap-6 text-sm text-neutral-500 mb-8">
+        <div className="hidden sm:flex justify-center gap-6 text-sm text-neutral-500 mb-8">
           {hero.features.map(f => (
             <span key={f} className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-accent inline-block" />
@@ -80,22 +81,22 @@ export default function TemplatePage() {
       </section>
 
 {/* Who this template is for */}
-<section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+<section className="max-w-6xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-20">
   {/* Who This Is For */}
   <div>
-    <div className="mb-8">
+    <div className="mb-8 text-center md:text-left">
       <h2 className="text-3xl font-bold mb-3 text-neutral-900">Who This Template Is For</h2>
       <p className="text-neutral-600 text-lg">
         Ideal if you want a professional presence without the complexity.
       </p>
     </div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
       {whoFor.map(w => (
         <div 
           key={w.label} 
-          className="bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-lg hover:border-neutral-300 transition-all duration-200 group"
+          className="bg-white rounded-xl border border-neutral-200 p-5 sm:p-6 hover:shadow-lg hover:border-neutral-300 transition-all duration-200 group text-center"
         >
-          <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
+          <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors mx-auto">
             <span className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-200 text-2xl">{w.icon}</span>
           </div>
           <div className="font-bold text-lg text-neutral-900 mb-2">{w.label}</div>
@@ -105,61 +106,10 @@ export default function TemplatePage() {
     </div>
   </div>
 
-  {/* Tech Stack & Setup */}
-  <div>
-    <div className="mb-8">
-      <h2 className="text-3xl font-bold mb-3 text-neutral-900">Tech Stack & Setup</h2>
-      <p className="text-neutral-600 text-lg">
-        Built with modern tools for best performance and developer experience.
-      </p>
-    </div>
-    
-    {/* Tech Stack Badges */}
-    <div className="flex flex-wrap gap-2 mb-6">
-      {techStack.map(t => (
-        <span 
-          key={t} 
-          className="px-4 py-2 rounded-lg bg-blue-50 text-blue-700 text-sm font-semibold border border-blue-200 hover:bg-blue-100 transition-colors"
-        >
-          {t}
-        </span>
-      ))}
-    </div>
-
-    {/* Terminal Setup */}
-    <div className="relative bg-neutral-900 rounded-xl overflow-hidden shadow-xl border border-neutral-800">
-      {/* Terminal Header */}
-      <div className="bg-neutral-800 px-4 py-3 flex items-center justify-between border-b border-neutral-700">
-        <div className="flex items-center gap-2">
-          <div className="flex gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-          </div>
-          <span className="text-neutral-400 text-sm ml-2 font-medium">Terminal</span>
-        </div>
-        <button
-          onClick={copyToClipboard}
-          className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-700 hover:bg-neutral-600 text-neutral-200 text-xs font-medium transition-colors"
-        >
-          <Copy className="w-3.5 h-3.5" />
-          Copy
-        </button>
-      </div>
-      
-      {/* Terminal Content */}
-      <div className="p-5 font-mono text-sm">
-        <pre className="text-green-400">
-          {setup.map((line, i) => (
-            <div key={i} className="mb-1">
-              <span className="text-neutral-500">$ </span>
-              {line}
-            </div>
-          ))}
-        </pre>
-      </div>
-    </div>
-  </div>
+  {/* Tech Stack & Setup - Image only, easy to customize */}
+  <section className="w-full flex justify-center items-center my-12">
+    <img src={(template as any).setupImage ?? "/default-image.png"} alt="Template setup visual" className="rounded-xl border border-border shadow-lg w-full max-w-2xl" />
+  </section>
 </section>
 
       {/* What's included */}

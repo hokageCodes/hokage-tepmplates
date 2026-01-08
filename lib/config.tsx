@@ -4,7 +4,7 @@ export const TEMPLATES = [
     name: "Founder Launch",
     description: "A high-conversion landing page for SaaS founders launching a new product.",
     icon: "rocket",
-    image: "/124shots_so.png",
+    image: "/founder-launch/founder-hero.png",
     whoFor: [
       { label: "Founders", desc: "Launch your product with a high-converting landing page", icon: "🚀" },
       { label: "Indie Makers", desc: "Build and ship your ideas quickly", icon: "⚡" },
@@ -17,31 +17,21 @@ export const TEMPLATES = [
       { label: "Optional Sections", desc: "Pick what you need" },
       { label: "Easy Customization", desc: "Simple to make it yours" }
     ],
-    techStack: ["Next.js 14", "Tailwind CSS", "React", "TypeScript"],
-    setup: [
-      "git clone https://github.com/your-org/founder-launch.git",
-      "cd founder-launch",
-      "npm install",
-      "npm run dev"
-    ],
-    makeItYours: [
-      { label: "Content", desc: "Update text in lib/data.ts" },
-      { label: "Colors", desc: "Change theme in tailwind.config.js" },
-      { label: "Images", desc: "Replace visuals in /public" }
-    ],
+    // techStack, setup, and makeItYours removed (see page for image)
     faqs: [
       { q: "Is there a backend?", a: "No backend included. Add your own if needed." },
       { q: "How do I customize?", a: "Edit lib/data.ts and tailwind.config.js." },
       { q: "Where do I deploy?", a: "Vercel, Netlify, or any static host." },
       { q: "Is it free?", a: "Yes, MIT licensed and open source." }
-    ]
+    ],
+    setupImage: "/founder-launch/founder-1.png"
   },
   {
     slug: "coach-launch",
     name: "Coach Launch",
     description: "Clean, authoritative layout for coaches selling courses or mentorship.",
     icon: "users",
-    image: "/136shots_so.png",
+    image: "/coach-launch/coach-hero.png",
     whoFor: [
       { label: "Coaches", desc: "Promote your coaching services", icon: "🎯" },
       { label: "Educators", desc: "Share your teaching expertise", icon: "📚" },
@@ -54,61 +44,19 @@ export const TEMPLATES = [
       { label: "Optional Sections", desc: "Flexible layout" },
       { label: "Easy Customization", desc: "Quick setup" }
     ],
-    techStack: ["Next.js 14", "Tailwind CSS", "React", "TypeScript"],
-    setup: [
-      "git clone https://github.com/your-org/coach-launch.git",
-      "cd coach-launch",
-      "npm install",
-      "npm run dev"
-    ],
-    makeItYours: [
-      { label: "Content", desc: "Update your messaging" },
-      { label: "Branding", desc: "Add your colors and logo" },
-      { label: "Images", desc: "Use your own photos" }
-    ],
+    // techStack, setup, and makeItYours removed (see page for image)
     faqs: [
       { q: "I don't have time", a: "Our system automates the busywork so you can focus on teaching." },
       { q: "I'm not tech-savvy", a: "No coding required. Simple, guided setup." }
-    ]
-  },
-  {
-    slug: "consultant-brand",
-    name: "Consultant / Brand",
-    description: "Professional personal branding site for consultants and agencies.",
-    icon: "briefcase",
-    image: "/458shots_so.png",
-    whoFor: [
-      { label: "Consultants", desc: "Establish your expertise", icon: "💼" },
-      { label: "Agencies", desc: "Showcase your services", icon: "🏢" },
-      { label: "Freelancers", desc: "Attract better clients", icon: "💻" },
-      { label: "Experts", desc: "Build authority online", icon: "🎓" }
     ],
-    whatsIncluded: [
-      { label: "Professional Layout", desc: "Business-ready design" },
-      { label: "Service Showcase", desc: "Highlight your offerings" },
-      { label: "Testimonials", desc: "Social proof sections" },
-      { label: "Contact Forms", desc: "Lead generation ready" }
-    ],
-    techStack: ["Next.js 14", "Tailwind CSS", "React", "TypeScript"],
-    setup: [
-      "git clone https://github.com/your-org/consultant-brand.git",
-      "cd consultant-brand",
-      "npm install",
-      "npm run dev"
-    ],
-    makeItYours: [
-      { label: "Services", desc: "Define your offerings" },
-      { label: "Portfolio", desc: "Add case studies" },
-      { label: "Style", desc: "Match your brand" }
-    ],
-    faqs: []
+    setupImage: "/coach-launch/coach-1.png"
   },
   {
     slug: "developer-portfolio",
     name: "Developer Portfolio",
     description: "Minimalist portfolio to showcase GitHub projects and technical skills.",
     icon: "code",
-    image: "/104shots_so.png",
+    image: "/developer-portfolio/dev-hero.png",
     whoFor: [
       { label: "Developers", desc: "Show off your coding skills", icon: "👨‍💻" },
       { label: "Engineers", desc: "Display technical projects", icon: "⚙️" },
@@ -121,26 +69,16 @@ export const TEMPLATES = [
       { label: "GitHub Integration", desc: "Link your repos" },
       { label: "Contact Form", desc: "Get in touch easily" }
     ],
-    techStack: ["Next.js 14", "Tailwind CSS", "React", "TypeScript"],
-    setup: [
-      "git clone https://github.com/your-org/developer-portfolio.git",
-      "cd developer-portfolio",
-      "npm install",
-      "npm run dev"
-    ],
-    makeItYours: [
-      { label: "Projects", desc: "Add your best work" },
-      { label: "Bio", desc: "Tell your story" },
-      { label: "Theme", desc: "Choose your style" }
-    ],
-    faqs: []
+    // techStack, setup, and makeItYours removed (see page for image)
+    faqs: [],
+    setupImage: "/developer-portfolio/dev-1.png"
   },
   {
     slug: "event-mini-course",
     name: "Event / Mini-Course",
     description: "Single-page event registration or mini-course landing page.",
     icon: "calendar",
-    image: "/814shots_so.png",
+    image: "/event-course/event-hero.png",
     whoFor: [
       { label: "Event Hosts", desc: "Promote your events", icon: "🎪" },
       { label: "Course Creators", desc: "Launch mini-courses", icon: "📖" },
@@ -153,19 +91,9 @@ export const TEMPLATES = [
       { label: "Speaker Profiles", desc: "Highlight presenters" },
       { label: "CTA Sections", desc: "Drive conversions" }
     ],
-    techStack: ["Next.js 14", "Tailwind CSS", "React", "TypeScript"],
-    setup: [
-      "git clone https://github.com/your-org/event-launch.git",
-      "cd event-launch",
-      "npm install",
-      "npm run dev"
-    ],
-    makeItYours: [
-      { label: "Event Details", desc: "Add date, time, location" },
-      { label: "Speakers", desc: "Feature your presenters" },
-      { label: "Pricing", desc: "Set ticket tiers" }
-    ],
-    faqs: []
+    // techStack, setup, and makeItYours removed (see page for image)
+    faqs: [],
+    setupImage: "/event-course/event-1.png"
   }
 ];
 
